@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import './Page.css'
 
 const SATFARM = () => {
@@ -31,26 +30,18 @@ const SATFARM = () => {
           <div className="partners-section mt-4 mb-4">
             <h3 className="text-center mb-3">Strategic Partners</h3>
             <div className="partners-grid">
-              <div className="partner-card">
-                <div className="partner-flag">🇰🇪</div>
-                <h4>Kibabii University</h4>
-                <p>Kenya</p>
-              </div>
-              <div className="partner-card">
-                <div className="partner-flag">🇺🇬</div>
-                <h4>Makerere University</h4>
-                <p>Uganda</p>
-              </div>
-              <div className="partner-card">
-                <div className="partner-flag">🇳🇬</div>
-                <h4>University of Nigeria</h4>
-                <p>Nigeria</p>
-              </div>
-              <div className="partner-card">
-                <div className="partner-flag">🇸🇿</div>
-                <h4>University of Eswatini</h4>
-                <p>Eswatini</p>
-              </div>
+              <a href="https://kibu.ac.ke/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
+                <img src="/kibabii-university-logo.png" alt="Kibabii University" />
+              </a>
+              <a href="https://mak.ac.ug/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
+                <img src="/makerere-university-logo.png" alt="Makerere University" />
+              </a>
+              <a href="https://www.unn.edu.ng/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
+                <img src="/university-of-nigeria-logo.png" alt="University of Nigeria" />
+              </a>
+              <a href="https://www.uneswa.ac.sz/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
+                <img src="/university-of-eswatini-logo.png" alt="University of Eswatini" />
+              </a>
             </div>
           </div>
 
@@ -113,17 +104,6 @@ const SATFARM = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-alt">
-        <div className="container text-center">
-          <h2 className="mb-2">Join the Digital Agriculture Revolution</h2>
-          <p className="mb-3">Learn how SATFARM can transform your agricultural operations</p>
-          <div className="cta-buttons">
-            <Link to="/contact" className="btn btn-primary">Learn More</Link>
-            <Link to="/contact?proposal=true" className="btn btn-outline">Request a Demo</Link>
           </div>
         </div>
       </section>

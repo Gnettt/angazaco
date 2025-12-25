@@ -33,11 +33,6 @@ const Header = () => {
           <Link to="/satfarm" onClick={closeMenu}>SATFARM</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
         </nav>
-
-        <div className={`header-buttons ${menuOpen ? 'buttons-open' : ''}`}>
-          <Link to="/contact" className="btn btn-outline" onClick={closeMenu}>Talk to Us</Link>
-          <Link to="/contact?proposal=true" className="btn btn-primary" onClick={closeMenu}>Request a Proposal</Link>
-        </div>
       </div>
     </header>
   )

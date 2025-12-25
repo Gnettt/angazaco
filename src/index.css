@@ -76,25 +76,27 @@ p {
 
 .btn {
   display: inline-block;
-  padding: 0.875rem 2rem;
-  border-radius: 6px;
+  padding: 0.875rem 2.25rem;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
   font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary {
   background-color: var(--primary-green);
   color: var(--white);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-green);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px var(--shadow);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.4);
 }
 
 .btn-outline {
@@ -132,16 +134,18 @@ p {
 }
 
 .card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(to bottom, var(--white) 0%, #fafafa 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid #f0f0f0;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px var(--shadow);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-green);
 }
 
 .hero {

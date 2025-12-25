@@ -93,11 +93,6 @@ const Contact = () => {
                     <input type="tel" id="phone" name="phone" />
                   </div>
 
-                  <div className="form-group">
-                    <label htmlFor="organization">Organization</label>
-                    <input type="text" id="organization" name="organization" />
-                  </div>
-
                   {isProposal && (
                     <div className="form-group">
                       <label htmlFor="service">Service Interest *</label>

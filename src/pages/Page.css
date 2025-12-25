@@ -151,6 +151,31 @@
   margin: 0;
 }
 
+.partner-logo-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  text-decoration: none;
+  min-height: 200px;
+}
+
+.partner-logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px var(--shadow);
+  filter: brightness(0.95);
+}
+
+.partner-logo-card img {
+  max-width: 90%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
 .features-grid-large {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

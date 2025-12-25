@@ -59,12 +59,6 @@
   width: 100%;
 }
 
-.header-buttons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-shrink: 0;
-}
 
 .mobile-menu-toggle {
   display: none;
@@ -110,25 +104,6 @@
 
   .nav-open {
     max-height: 400px;
-  }
-
-  .header-buttons {
-    order: 5;
-    width: 100%;
-    flex-direction: column;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .buttons-open {
-    max-height: 200px;
-    margin-bottom: 1rem;
-  }
-
-  .header-buttons .btn {
-    width: 100%;
-    text-align: center;
   }
 
   .nav a {
