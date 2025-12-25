@@ -34,7 +34,7 @@ const SATFARM = () => {
                 <img src="/kibabii-university-logo.png" alt="Kibabii University" />
               </a>
               <a href="https://mak.ac.ug/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/makerere-university-logo.png" alt="Makerere University" />
+                <img src="/makererelogo.png" alt="Makerere University" />
               </a>
               <a href="https://www.unn.edu.ng/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
                 <img src="/university-of-nigeria-logo.png" alt="University of Nigeria" />
