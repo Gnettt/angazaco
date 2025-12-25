@@ -31,13 +31,13 @@ const SATFARM = () => {
             <h3 className="text-center mb-3">Strategic Partners</h3>
             <div className="partners-grid">
               <a href="https://kibu.ac.ke/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/kibabii-university-logo.png" alt="Kibabii University" />
+                <img src="/kibabiilogo.png" alt="Kibabii University" />
               </a>
               <a href="https://mak.ac.ug/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
                 <img src="/makererelogo.png" alt="Makerere University" />
               </a>
               <a href="https://www.unn.edu.ng/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/university-of-nigeria-logo.png" alt="University of Nigeria" />
+                <img src="/universityofnigeria.png" alt="University of Nigeria" />
               </a>
               <a href="https://www.uneswa.ac.sz/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
                 <img src="/university-of-eswatini-logo.png" alt="University of Eswatini" />
