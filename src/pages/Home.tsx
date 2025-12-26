@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Counter from '../components/Counter'
 import './Home.css'
 
 const Home = () => {
@@ -78,15 +79,21 @@ const Home = () => {
           <h2 className="text-center mb-4">Impact Snapshot</h2>
           <div className="impact-grid">
             <div className="impact-card">
-              <div className="impact-number">25+</div>
+              <div className="impact-number">
+                <Counter target={25} suffix="+" duration={2000} />
+              </div>
               <p>Endpoint automation and IoT projects delivered</p>
             </div>
             <div className="impact-card">
-              <div className="impact-number">1,900+</div>
+              <div className="impact-number">
+                <Counter target={1900} suffix="+" duration={2500} />
+              </div>
               <p>Farmers trained through programs and pilots</p>
             </div>
             <div className="impact-card">
-              <div className="impact-number">7+</div>
+              <div className="impact-number">
+                <Counter target={7} suffix="+" duration={1500} />
+              </div>
               <p>Countries supported across Africa</p>
             </div>
           </div>

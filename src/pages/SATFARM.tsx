@@ -31,16 +31,28 @@ const SATFARM = () => {
             <h3 className="text-center mb-3">Strategic Partners</h3>
             <div className="partners-grid">
               <a href="https://kibu.ac.ke/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/kibabiilogo.png" alt="Kibabii University" />
+                <div className="partner-logo-content">
+                  <img src="/kibabiilogo.png" alt="Kibabii University" />
+                  <p className="partner-name">Kibabii University<br />in Kenya</p>
+                </div>
               </a>
               <a href="https://mak.ac.ug/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/makererelogo.png" alt="Makerere University" />
+                <div className="partner-logo-content">
+                  <img src="/makererelogo.png" alt="Makerere University" />
+                  <p className="partner-name">Makerere University<br />in Uganda</p>
+                </div>
               </a>
               <a href="https://www.unn.edu.ng/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/universityofnigeria.png" alt="University of Nigeria" />
+                <div className="partner-logo-content">
+                  <img src="/universityofnigeria.png" alt="University of Nigeria" />
+                  <p className="partner-name">University of Nigeria</p>
+                </div>
               </a>
               <a href="https://www.uneswa.ac.sz/" target="_blank" rel="noopener noreferrer" className="partner-logo-card">
-                <img src="/university-of-eswatini-logo.png" alt="University of Eswatini" />
+                <div className="partner-logo-content">
+                  <img src="/university-of-eswatini-logo.png" alt="University of Eswatini" />
+                  <p className="partner-name">University of Eswatini</p>
+                </div>
               </a>
             </div>
           </div>
