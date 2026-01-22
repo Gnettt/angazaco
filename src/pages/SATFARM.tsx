@@ -1,8 +1,25 @@
-import './Page.css'
+import { useState, useRef } from 'react';
+import './Page.css';
 
 const SATFARM = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const images = Array.from({ length: 20 }, (_, i) => i + 1);
+
+  const scrollCarousel = (direction: string) => {
+    if (carouselRef.current) {
+      const scrollAmount = 180;
+      carouselRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="page">
+      {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
           <h1>SATFARM</h1>
@@ -12,6 +29,7 @@ const SATFARM = () => {
         </div>
       </section>
 
+      {/* Content Section */}
       <section className="section">
         <div className="container">
           <div className="content-block">
@@ -27,6 +45,7 @@ const SATFARM = () => {
             </p>
           </div>
 
+          {/* Partners Section */}
           <div className="partners-section mt-4 mb-4">
             <h3 className="text-center mb-3">Strategic Partners</h3>
             <div className="partners-grid">
@@ -57,6 +76,7 @@ const SATFARM = () => {
             </div>
           </div>
 
+          {/* Platform Features */}
           <div className="platform-features mt-4">
             <h2 className="text-center mb-4">Platform Capabilities</h2>
             <div className="features-grid-large">
@@ -64,8 +84,8 @@ const SATFARM = () => {
                 <div className="feature-icon-large">
                   <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                  <circle cx="12" cy="12" r="3"/>
-                </svg>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
                 </div>
                 <h3>AI-Powered Advisory Services</h3>
                 <p>
@@ -119,8 +139,138 @@ const SATFARM = () => {
           </div>
         </div>
       </section>
-    </div>
-  )
-}
 
-export default SATFARM
+      {/* Gallery Carousel */}
+      <section className="section section-alt" style={{ position: 'relative' }}>
+        <div className="container">
+          <h2 className="text-center mb-4">SATFARM in Action</h2>
+
+          {/* Carousel buttons */}
+          <button
+            onClick={() => scrollCarousel('left')}
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '10px',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              background: '#787878cc)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '50px',
+              height: '50px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            ‹
+          </button>
+
+          <button
+            onClick={() => scrollCarousel('right')}
+            style={{
+              position: 'absolute',
+              top: '50%',
+              right: '10px',
+              transform: 'translateY(-50%)',
+              zIndex: 10,
+              background: '#787878cc)',
+              border: 'none',
+              borderRadius: '50%',
+              width: '50px',
+              height: '50px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            ›
+          </button>
+
+          <div
+            ref={carouselRef}
+            style={{
+              overflowX: 'auto',
+              width: '100%',
+              scrollBehavior: 'smooth',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                gap: '20px',
+                width: 'max-content'
+              }}
+            >
+              {images.map((num) => (
+                <img
+                  key={num}
+                  src={`/${num}.png`}
+                  alt={`SATFARM ${num}`}
+                  style={{
+                    width: '160px',
+                    height: '200px',
+                    objectFit: 'cover',
+                    borderRadius: '6px',
+                    display: 'block',
+                    cursor: 'pointer'
+                  }}
+                  onClick={() => setSelectedImage(`/${num}.png`)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Lightbox overlay */}
+        {selectedImage && (
+          <div
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              backgroundColor: 'rgba(0,0,0,0.8)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 1000,
+            }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <div
+              style={{ position: 'relative' }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Preview"
+                style={{ maxHeight: '80vh', maxWidth: '80vw', borderRadius: '8px' }}
+              />
+              <button
+                onClick={() => setSelectedImage(null)}
+                style={{
+                  position: 'absolute',
+                  top: '-10px',
+                  right: '-10px',
+                  background: '#fff',
+                  border: 'none',
+                  borderRadius: '50%',
+                  width: '30px',
+                  height: '30px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold',
+                }}
+              >
+                ✕
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+    </div>
+  );
+};
+
+export default SATFARM;

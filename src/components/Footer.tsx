@@ -17,7 +17,9 @@ const Footer = () => {
               <Link to="/">Home</Link>
               <Link to="/cumulocity">Cumulocity</Link>
               <Link to="/consultancy">Consultancy</Link>
-              <Link to="/satfarm">SATFARM</Link>
+              <Link to="/satfarm">SatFarm</Link>
+              <Link to="/kodra">Kodra</Link>
+              <Link to="/pricacypolicy">Privacy Policy</Link>
             </nav>
           </div>
 

@@ -393,10 +393,6 @@
     width: 100%;
     max-width: 300px;
   }
+  
 }
 
-@media (max-width: 480px) {
-  .partners-grid {
-    grid-template-columns: 1fr;
-  }
-}
