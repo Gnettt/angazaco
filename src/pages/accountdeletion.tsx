@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 import './Page.css'
 
 const AccountDeletion = () => {
