@@ -208,8 +208,8 @@ const SATFARM = () => {
                   src={`/${num}.png`}
                   alt={`SATFARM ${num}`}
                   style={{
-                    width: '160px',
-                    height: '200px',
+                    width: '200px',
+                    height: '400px',
                     objectFit: 'cover',
                     borderRadius: '6px',
                     display: 'block',
