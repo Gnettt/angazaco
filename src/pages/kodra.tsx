@@ -13,21 +13,81 @@ export default function Kodra() {
         </div>
       </section>
 
-      {/* ...everything above remains unchanged ... */}
+      <section className="section">
+        <div className="container" style={{ marginTop: '48px' }}>
+          <div className="content-block">
+            <h2>What is Kodra?</h2>
+            <p>
+              The revolutionary Kenyan startup where vendors keep 100% of their sales!
+              Discover authentic fashion, quality electronics, and unique thrift finds
+              with free delivery by Kodra Logistics.
+            </p>
+          </div>
+
+          <div className="container">
+            <div className="content-block">
+              <h2>Business Model</h2>
+
+              <div className="features-grid mt-4">
+                <div className="feature-item">
+                  <h3>100% Vendor Earnings</h3>
+                  <p>Vendors keep every shilling they earn with zero commission.</p>
+                </div>
+
+                <div className="feature-item">
+                  <h3>Free Kodra Logistics</h3>
+                  <p>In-house delivery at no cost to vendors or customers.</p>
+                </div>
+
+                <div className="feature-item highlight">
+                  <h3>Affiliate to Employee</h3>
+                  <p>Top 3 affiliates monthly join our marketing team.</p>
+                </div>
+
+                <div className="feature-item">
+                  <h3>Trusted Vendors</h3>
+                  <p>Verified sellers with reviews and ratings for quality.</p>
+                </div>
+
+                <div className="feature-item">
+                  <h3>24/7 Support</h3>
+                  <p>Dedicated customer support via chat, call, or email.</p>
+                </div>
+
+                <div className="feature-item">
+                  <h3>Easy Returns</h3>
+                  <p>7-day free returns for damaged or unsatisfactory items.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
+        <div className="container" style={{ marginTop: '48px' }}>
+          <div className="content-block">
+            <h2>Why Kodra?</h2>
+            <p>
+              <b>SATFARM</b> is developed by <b>Kodra Holdings</b> in collaboration with{' '}
+              <b>Angaza Consultants</b>, blending Angaza’s strategic vision with Kodra’s
+              technical expertise. Kodra Holdings designed and built the platform,
+              while Angaza Consultants manage hardware operations and manpower.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="section">
         <div className="container" style={{ marginTop: '48px' }}>
           <div className="content-block">
             <h2>Account Deletion</h2>
             <p>
-              Users may request deletion of their account and associated personal data at any time.
-              To request account deletion, users can contact us at;
-              <b> Email: support@kodraholdings.com</b>. Upon verification of the request,
-              we will permanently delete the account and related data in accordance with
-              applicable legal and regulatory requirements.
+              Users may request deletion of their account and associated personal data
+              at any time. Requests are reviewed and permanently processed in
+              accordance with legal and regulatory requirements.
             </p>
 
-            {/* Account Deletion Button */}
             <Link
               to="/accountdeletion"
               style={{
@@ -39,14 +99,7 @@ export default function Kodra() {
                 borderRadius: '8px',
                 fontWeight: 600,
                 textDecoration: 'none',
-                transition: 'background-color 0.2s ease',
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.backgroundColor = '#44963F')
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.backgroundColor = '#52B04B')
-              }
             >
               Request Account Deletion
             </Link>
