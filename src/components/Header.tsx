@@ -31,7 +31,6 @@ const Header = () => {
           <Link to="/cumulocity" onClick={closeMenu}>Cumulocity</Link>
           <Link to="/consultancy" onClick={closeMenu}>Consultancy</Link>
           <Link to="/satfarm" onClick={closeMenu}>SatFarm</Link>
-          <Link to="/kodra" onClick={closeMenu}>Kodra</Link>
           <Link to="/contact" onClick={closeMenu}>Contact</Link>
           <Link to="/accountdeletion" onClick={closeMenu}>Account Deletion</Link>
           <Link to="/pricacypolicy" onClick={closeMenu}>Privacy Policy</Link>

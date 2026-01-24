@@ -17,11 +17,8 @@ export default function AccountDeletion() {
           <div className="content-block">
             <h2>How to delete your Angaza account?</h2>
             <p>
-              Users may request deletion of their account and associated personal
-              data at any time. To request account deletion, users can contact us
-              at <b>support@kodraholdings.com</b>. Upon verification of the
-              request, we will permanently delete the account and related data
-              in accordance with applicable legal and regulatory requirements.
+              Users may request deletion of their account and associated personal data at any time. To request account deletion, users can contact us at: <b>Email: support@angazaconsultants.co.ke</b>. Upon verification of the request, we will permanently delete the account and related data in accordance with applicable legal and regulatory requirements.
+
             </p>
           </div>
         </div>
@@ -38,7 +35,7 @@ export default function AccountDeletion() {
             </p>
 
             <form
-              action="mailto:support@kodraholdings.com"
+              action="mailto:support@angazaconsultants.co.ke"
               method="POST"
               encType="text/plain"
               style={{ marginTop: '32px', maxWidth: '520px' }}

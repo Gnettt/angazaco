@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom'
 import { useState, useRef } from 'react';
 import './Page.css';
+import { FaSeedling, FaCloudSun, FaChartLine } from 'react-icons/fa';
+import { GiCow, GiWheat } from 'react-icons/gi';
 
 const SATFARM = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [activeCapability, setActiveCapability] = useState<string | null>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const images = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -80,195 +84,184 @@ const SATFARM = () => {
           <div className="platform-features mt-4">
             <h2 className="text-center mb-4">Platform Capabilities</h2>
             <div className="features-grid-large">
-              <div className="feature-card-large">
-                <div className="feature-icon-large">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                    <circle cx="12" cy="12" r="3"/>
-                  </svg>
-                </div>
-                <h3>AI-Powered Advisory Services</h3>
-                <p>
-                  Intelligent recommendations based on real-time data analysis, helping farmers make informed
-                  decisions about planting, irrigation, fertilization, and pest management.
-                </p>
+              <div className="feature-card-large" onClick={() => setActiveCapability('soil')}>
+                <div className="feature-icon-large"><FaSeedling /></div>
+                <h3>Soil Management</h3>
+                <p>Rapid soil diagnostics and precision-based agroecological recommendations.</p>
               </div>
 
-              <div className="feature-card-large">
-                <div className="feature-icon-large">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="7" width="20" height="14" rx="2"/>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                  </svg>
-                </div>
-                <h3>IoT-Based Farm Monitoring</h3>
-                <p>
-                  Connected sensors and devices provide continuous monitoring of soil conditions, weather patterns,
-                  crop health, and other critical farm parameters.
-                </p>
+              <div className="feature-card-large" onClick={() => setActiveCapability('animal')}>
+                <div className="feature-icon-large"><GiCow /></div>
+                <h3>Animal Health</h3>
+                <p>IoT and AI-powered livestock health monitoring and diagnostics.</p>
               </div>
 
-              <div className="feature-card-large">
-                <div className="feature-icon-large">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M3 3v18h18"/>
-                    <path d="m19 9-5 5-4-4-3 3"/>
-                  </svg>
-                </div>
+              <div className="feature-card-large" onClick={() => setActiveCapability('iot')}>
+                <div className="feature-icon-large"><GiWheat /></div>
+                <h3>IoT-Based Crop Pest & Disease Management</h3>
+                <p>AI-driven crop diagnostics with organic and conventional treatment pathways.</p>
+              </div>
+
+              <div className="feature-card-large" onClick={() => setActiveCapability('climate')}>
+                <div className="feature-icon-large"><FaCloudSun /></div>
                 <h3>Real-Time Climate & Crop Analytics</h3>
-                <p>
-                  Access to up-to-date climate data, weather forecasts, and crop performance analytics to support
-                  climate-smart farming practices.
-                </p>
+                <p>Localised climate forecasts translated into crop-specific guidance.</p>
               </div>
 
-              <div className="feature-card-large">
-                <div className="feature-icon-large">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M12 6v6l4 2"/>
-                  </svg>
-                </div>
+              <div className="feature-card-large" onClick={() => setActiveCapability('market')}>
+                <div className="feature-icon-large"><FaChartLine /></div>
                 <h3>Market & Traceability Tools</h3>
-                <p>
-                  Connect farmers to markets while ensuring product traceability throughout the value chain,
-                  enhancing market access and product quality assurance.
-                </p>
+                <p>Predictive pricing, regional market insights and traceability features.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Section */}
+      <section className="section">
+        <div className="container" style={{ marginTop: '48px' }}>
+          <div className="content-block">
+            <h2>Technology</h2>
+            <p>
+              Angaza SATFARM is built in partnership with Kodra Holdings Limited. Kodra is a Kenya based tech startup that is focused on automation and IoT. Their strength is AI and application development. 
+            </p>
+            <p><b>Kodra Holding Ltd</b></p>
           </div>
         </div>
       </section>
 
       {/* Gallery Carousel */}
-      <section className="section section-alt" style={{ position: 'relative' }}>
-        <div className="container">
-          <h2 className="text-center mb-4">SATFARM in Action</h2>
+<section className="section section-alt" style={{ position: 'relative' }}>
+  <div className="container">
+    <h2 className="text-center mb-4">SATFARM in Action</h2>
 
-          {/* Carousel buttons */}
-          <button
-            onClick={() => scrollCarousel('left')}
+    {/* Carousel buttons */}
+    <button
+      onClick={() => scrollCarousel('left')}
+      style={{
+        position: 'absolute',
+        top: '50%',
+        left: '10px',
+        transform: 'translateY(-50%)',
+        zIndex: 10,
+        background: '#787878cc',
+        border: 'none',
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+      }}
+    >
+      ‹
+    </button>
+
+    <button
+      onClick={() => scrollCarousel('right')}
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        zIndex: 10,
+        background: '#787878cc',
+        border: 'none',
+        borderRadius: '50%',
+        width: '50px',
+        height: '50px',
+        cursor: 'pointer',
+        fontWeight: 'bold',
+      }}
+    >
+      ›
+    </button>
+
+    <div
+      ref={carouselRef}
+      style={{
+        overflowX: 'auto',
+        width: '100%',
+        scrollBehavior: 'smooth',
+      }}
+    >
+      <div style={{ display: 'flex', flexDirection: 'row', gap: '20px', width: 'max-content' }}>
+        {images.map((num) => (
+          <img
+            key={num}
+            src={`/${num}.png`}
+            alt={`SATFARM ${num}`}
             style={{
-              position: 'absolute',
-              top: '50%',
-              left: '10px',
-              transform: 'translateY(-50%)',
-              zIndex: 10,
-              background: '#787878cc)',
-              border: 'none',
-              borderRadius: '50%',
-              width: '50px',
-              height: '50px',
+              width: '200px',
+              height: '400px',
+              objectFit: 'cover',
+              borderRadius: '6px',
+              display: 'block',
               cursor: 'pointer',
-              fontWeight: 'bold',
             }}
-          >
-            ‹
-          </button>
+            onClick={() => setSelectedImage(`/${num}.png`)}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
 
-          <button
-            onClick={() => scrollCarousel('right')}
-            style={{
-              position: 'absolute',
-              top: '50%',
-              right: '10px',
-              transform: 'translateY(-50%)',
-              zIndex: 10,
-              background: '#787878cc)',
-              border: 'none',
-              borderRadius: '50%',
-              width: '50px',
-              height: '50px',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-            }}
-          >
-            ›
-          </button>
+  {/* Lightbox overlay */}
+  {selectedImage && (
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundColor: 'rgba(0,0,0,0.8)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000,
+      }}
+      onClick={() => setSelectedImage(null)}
+    >
+      <div style={{ position: 'relative' }} onClick={(e) => e.stopPropagation()}>
+        <img
+          src={selectedImage}
+          alt="Preview"
+          style={{ maxHeight: '80vh', maxWidth: '80vw', borderRadius: '8px' }}
+        />
+        <button
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: 'absolute',
+            top: '-10px',
+            right: '-10px',
+            background: '#fff',
+            border: 'none',
+            borderRadius: '50%',
+            width: '30px',
+            height: '30px',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+          }}
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  )}
+</section>
 
-          <div
-            ref={carouselRef}
-            style={{
-              overflowX: 'auto',
-              width: '100%',
-              scrollBehavior: 'smooth',
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: '20px',
-                width: 'max-content'
-              }}
-            >
-              {images.map((num) => (
-                <img
-                  key={num}
-                  src={`/${num}.png`}
-                  alt={`SATFARM ${num}`}
-                  style={{
-                    width: '200px',
-                    height: '400px',
-                    objectFit: 'cover',
-                    borderRadius: '6px',
-                    display: 'block',
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => setSelectedImage(`/${num}.png`)}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
+{/* Support Section */}
+<section className="section">
+  <div className="container text-center">
+    <h2 className="mb-2">Need Support?</h2>
+    <p className="mb-3">Contact us for assistance with any issues or questions.</p>
+    <div className="cta-buttons">
+      <Link to="/contact" className="btn btn-primary">Request support</Link>
+    </div>
+  </div>
+</section>
 
-        {/* Lightbox overlay */}
-        {selectedImage && (
-          <div
-            style={{
-              position: 'fixed',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              backgroundColor: 'rgba(0,0,0,0.8)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              zIndex: 1000,
-            }}
-            onClick={() => setSelectedImage(null)}
-          >
-            <div
-              style={{ position: 'relative' }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={selectedImage}
-                alt="Preview"
-                style={{ maxHeight: '80vh', maxWidth: '80vw', borderRadius: '8px' }}
-              />
-              <button
-                onClick={() => setSelectedImage(null)}
-                style={{
-                  position: 'absolute',
-                  top: '-10px',
-                  right: '-10px',
-                  background: '#fff',
-                  border: 'none',
-                  borderRadius: '50%',
-                  width: '30px',
-                  height: '30px',
-                  cursor: 'pointer',
-                  fontWeight: 'bold',
-                }}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
-      </section>
     </div>
   );
 };

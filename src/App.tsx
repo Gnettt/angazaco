@@ -6,7 +6,6 @@ import Home from './pages/Home'
 import Cumulocity from './pages/Cumulocity'
 import Consultancy from './pages/Consultancy'
 import SATFARM from './pages/SATFARM'
-import Kodra from './pages/kodra'
 import Contact from './pages/Contact'
 import Privacypolicy from './pages/pricacypolicy'
 import AccountDeletion from './pages/accountdeletion'
@@ -34,7 +33,6 @@ function App() {
             <Route path="/consultancy" element={<Consultancy />} />
             <Route path="/satfarm" element={<SATFARM />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/kodra" element={<Kodra />} />
             <Route path="/pricacypolicy" element={<Privacypolicy />} />
             <Route path="/accountdeletion" element={<AccountDeletion />} />
           </Routes>
